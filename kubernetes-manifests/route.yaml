@@ -1,0 +1,18 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  name: bookstack
+  namespace: projet-gp-<x>
+spec:
+  host: python-gp-<x>.apps.openshift.kakor.ovh
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  port:
+    targetPort: 80
+  to:
+    kind: ""
+    name: python-svc
+    weight: null

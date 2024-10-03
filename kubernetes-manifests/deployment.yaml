@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    run: pythonapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: pythonapp
+  template:
+    metadata:
+      labels:
+        run: pythonapp
+    spec:
+      containers:
+      - name: nginx
+        image: harbor.kakor.ovh/ipi/groupeX:tag
+        ports:
+        - containerPort: 5000
