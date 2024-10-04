@@ -11,7 +11,7 @@ spec:
     insecureEdgeTerminationPolicy: Redirect
     termination: edge
   port:
-    targetPort: 80
+    targetPort: 5000
   to:
     kind: ""
     name: python-svc
