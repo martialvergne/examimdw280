@@ -51,6 +51,8 @@ jobs:
         run: |
           oc login https://api.openshift.kakor.ovh:6443 --token=sha256~VSPHm-ydRnSXHoIf3hbFbiyOptjNd7KL1vN8tJYaTYE --insecure-skip-tls-verify
           oc apply -f kubernetes-manifests/deployment.yaml -n projet-gp-2
+          oc apply -f kubernetes-manifests/service.yaml -n projet-gp-2
+          oc apply -f kubernetes-manifests/route.yaml -n projet-gp-2
           oc apply -f kubernetes
 
 
