@@ -55,6 +55,6 @@ jobs:
           oc apply -f kubernetes-manifests/deployment.yaml -n projet-gp-2
           oc apply -f kubernetes-manifests/service.yaml -n projet-gp-2
           oc apply -f kubernetes-manifests/route.yaml -n projet-gp-2
-          oc apply -f kubernetes
+
 
 
