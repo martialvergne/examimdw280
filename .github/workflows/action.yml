@@ -16,7 +16,7 @@ jobs:
         run: docker build . --file Dockerfile --tag groupe2:${{ github.sha }}
  
       - name: Log in to Harbor Container Registry
-        run: echo "${{ secrets.HARBOR_PASSWORD }}" | docker login harbor.kakor.ovh -u ${{ secrets.HARBOR_USER }} --password-stdin
+        run: echo "B4teau123!" | docker login harbor.kakor.ovh -u ipi --password-stdin
  
       - name: Build and push Docker image
         run: |
