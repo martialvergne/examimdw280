@@ -49,7 +49,7 @@ jobs:
     steps:
       - name: Deploy on Openshift
         run: |
-          oc login https://api.openshift.kakor.ovh:6443 --token=sha256~VSPHm-ydRnSXHoIf3hbFbiyOptjNd7KL1vN8tJYaTYE
+          oc login https://api.openshift.kakor.ovh:6443 --token=sha256~VSPHm-ydRnSXHoIf3hbFbiyOptjNd7KL1vN8tJYaTYE --certificate-authority
           oc apply -f kubernetes-manifest/deployment.yaml -n projet-gp-2
           oc apply -f kubernetes
 
