@@ -12,8 +12,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
  
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag groupe2:${{ github.sha }}
  
       - name: Log in to Harbor Container Registry
         run: echo "${{ secrets.HARBOR_PASSWORD }}" | docker login harbor.kakor.ovh -u ${{ secrets.HARBOR_USER }} --password-stdin
