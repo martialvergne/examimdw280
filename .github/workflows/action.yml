@@ -55,6 +55,7 @@ jobs:
           oc apply -f kubernetes-manifests/deployment.yaml -n projet-gp-2
           oc apply -f kubernetes-manifests/service.yaml -n projet-gp-2
           oc apply -f kubernetes-manifests/route.yaml -n projet-gp-2
+          oc set image deployments/nginx-deployment nginx=harbor.kakor.ovh/ipi/groupe2:${{ github.sha }}
 
 
 
